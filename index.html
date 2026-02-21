@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Company Companion | IPA & .DEB</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            background: #000000;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        /* Ambient White Spotlights */
+        .bg-orb {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(120px);
+            z-index: -1;
+            animation: floatOrb 12s infinite alternate ease-in-out;
+        }
+        .orb-1 { width: 450px; height: 450px; background: rgba(255, 255, 255, 0.08); top: -100px; left: -100px; }
+        .orb-2 { width: 600px; height: 600px; background: rgba(255, 255, 255, 0.05); bottom: -200px; right: -100px; animation-delay: -6s; }
+
+        @keyframes floatOrb {
+            0% { transform: translate(0, 0) scale(1); }
+            100% { transform: translate(60px, 60px) scale(1.1); }
+        }
+
+        header {
+            background: rgba(10, 10, 10, 0.6);
+            backdrop-filter: blur(20px);
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            z-index: 100;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .logo {
+            max-height: 50px;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.2);
+            animation: float 4s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+
+        /* IPA SECTION (TOP) */
+        .hero {
+            text-align: center;
+            min-height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-top: 100px;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .ipa-btn {
+            background: #ffffff;
+            color: #000000;
+            padding: 20px 50px;
+            font-size: 1.2rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all 0.3s ease;
+            margin-top: 30px;
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+        }
+
+        .ipa-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 50px rgba(255, 255, 255, 0.6);
+        }
+
+        /* .DEB SECTION (BOTTOM) */
+        .section-title {
+            text-align: center;
+            margin-top: 80px;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: #444;
+        }
+
+        .info-grid {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            padding: 40px 20px 100px;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 35px;
+            width: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.4s ease;
+        }
+
+        .card h2 {
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+        }
+
+        .btn {
+            padding: 14px 28px;
+            font-size: 0.85rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            display: inline-block;
+            cursor: pointer;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .btn-safe {
+            border: 2px solid #ffffff;
+            color: #ffffff;
+        }
+        .btn-safe:hover {
+            background: #ffffff;
+            color: #000;
+        }
+
+        .btn-danger {
+            border: 2px solid #ff0000;
+            color: #ff4444;
+        }
+        .btn-danger:hover {
+            background: #ff0000;
+            color: #fff;
+            animation: shake 0.15s infinite;
+        }
+
+        @keyframes shake {
+            0% { transform: translate(2px, 1px); }
+            50% { transform: translate(-1px, -1px); }
+            100% { transform: translate(1px, 2px); }
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px;
+            color: #222;
+            letter-spacing: 5px;
+            font-size: 0.7rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+
+    <header>
+        <div style="display: flex; align-items: center; gap: 15px;">
+            <img src="Logo.png" alt="Animal Company Logo" class="logo">
+            <h2 style="letter-spacing: 3px; font-weight: 800;">AC COMPANION</h2>
+        </div>
+    </header>
+
+    <section class="hero">
+        <p style="letter-spacing: 3px; color: #888;">LATEST RELEASE</p>
+        <h1>DECRYPTED IPA</h1>
+        <p style="color: #444; margin-top: 10px;">FOR SIDELOADING (ALTSTORE / SIDELOADLY)</p>
+        <a href="latest.ipa" download class="ipa-btn download-link">Download IPA</a>
+    </section>
+
+    <h3 class="section-title">Jailbreak Repos (.DEB)</h3>
+    
+    <section class="info-grid">
+        <div class="card">
+            <div>
+                <h2>Lackson Mods</h2>
+                <p>Verified clean .DEB for jailbroken devices. Optimized by Lackson for Animal Company.</p>
+            </div>
+            <a href="Lackson.deb" download class="btn btn-safe download-link">Download .DEB</a>
+        </div>
+
+        <div class="card" style="border-color: rgba(255,0,0,0.2);">
+            <div>
+                <h2 style="color: #ff4444;">XD (Skidder)</h2>
+                <p>Unverified .DEB. XD is a known skidder—stolen code and high risk of malware.</p>
+            </div>
+            <a href="#" class="btn btn-danger download-link">dangerous file download</a>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2026 ANIMAL COMPANY COMPANION
+    </footer>
+
+    <script>
+        // Only triggers an alert if the link is still '#' (like the XD button)
+        const buttons = document.querySelectorAll('.download-link');
+        buttons.forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                if(this.getAttribute('href') === '#') {
+                    e.preventDefault();
+                    alert('You must link a file for the XD download, or leave it blank to prevent users from downloading it!');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
